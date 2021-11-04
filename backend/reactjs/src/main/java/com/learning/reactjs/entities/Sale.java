@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_sales")
-public class Sales {
+public class Sale {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -62,9 +62,9 @@ public class Sales {
 		this.seller = seller;
 	}
 	
-	public Sales() { }
+	public Sale() { }
 	
-	public Sales(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
+	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
 		super();
 		this.id = id;
 		this.visited = visited;

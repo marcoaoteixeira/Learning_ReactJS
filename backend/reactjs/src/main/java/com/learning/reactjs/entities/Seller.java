@@ -19,7 +19,7 @@ public class Seller {
 	private String name;
 	
 	@OneToMany(mappedBy = "seller")
-	private List<Sales> sales = new ArrayList<>();
+	private List<Sale> sales = new ArrayList<>();
 	
 	public Long getId() {
 		return id;
@@ -33,7 +33,7 @@ public class Seller {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public List<Sales> getSales() {
+	public List<Sale> getSales() {
 		return sales;
 	}
 	
