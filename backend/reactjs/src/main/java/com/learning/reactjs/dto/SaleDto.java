@@ -2,6 +2,8 @@ package com.learning.reactjs.dto;
 
 import java.time.LocalDate;
 
+import com.learning.reactjs.entities.Sale;
+
 public class SaleDto {
 	private Long id;
 	private Integer visited;
@@ -51,11 +53,23 @@ public class SaleDto {
 	
 	public SaleDto(Long id, Integer visited, Integer deals, Double amount, LocalDate date, SellerDto seller) {
 		super();
+		
 		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
 		this.amount = amount;
 		this.date = date;
 		this.seller = seller;
+	}
+	
+	public SaleDto(Sale entity) {
+		super();
+		
+		id = entity.getId();
+		visited = entity.getVisited();
+		deals = entity.getDeals();
+		amount = entity.getAmount();
+		date = entity.getDate();
+		seller = new SellerDto(entity.getSeller());
 	}
 }
