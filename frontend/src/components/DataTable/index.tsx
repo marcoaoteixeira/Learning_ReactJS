@@ -17,7 +17,7 @@ function DataTable() {
 
     useEffect(() => {
         axios
-            .get(`${BASE_URL}/sales?page=${activePage}&size=${page.size}&order=date,desc`)
+            .get(`${BASE_URL}/sales?page=${activePage}&size=10&order=date,desc`)
             .then((response) => {
                 setPage(response.data);
             });
